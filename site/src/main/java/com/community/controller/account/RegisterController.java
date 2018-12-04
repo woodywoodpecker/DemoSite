@@ -16,6 +16,8 @@
 
 package com.community.controller.account;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.broadleafcommerce.common.exception.ServiceException;
 import org.broadleafcommerce.core.pricing.service.exception.PricingException;
 import org.broadleafcommerce.core.web.controller.account.BroadleafRegisterController;
@@ -36,10 +38,13 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 @RequestMapping("/register")
 public class RegisterController extends BroadleafRegisterController {
-    
+
+    private static final Log LOG = LogFactory.getLog(RegisterController.class);
+
     @RequestMapping(method=RequestMethod.GET)
     public String register(HttpServletRequest request, HttpServletResponse response, Model model,
             @ModelAttribute("registrationForm") RegisterCustomerForm registerCustomerForm) {
+        LOG.info("[RegisterController] [register] this is for register get method");
         return super.register(registerCustomerForm, request, response, model);
     }
     
