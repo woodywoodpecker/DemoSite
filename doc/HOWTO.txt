@@ -1,0 +1,7 @@
+MAVEN_OPTS： -Xdebug -Xrunjdwp:transport=dt_socket,address=1044,server=y,suspend=n 
+			 -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8000
+
+site=>  https://192.168.1.46:8443/
+admin=> https://192.168.1.46:8444/admin/login
+
+http://www.jq22.com/demo/note20151222/profile.html#
